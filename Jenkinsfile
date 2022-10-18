@@ -7,8 +7,11 @@ pipeline{
 	}
   stages{
      steps{
+	sh '''
 	   apt-get update
 	   apt-get install python
+	   '''
+
 	  }
        }
 }
