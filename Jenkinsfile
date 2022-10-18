@@ -1,7 +1,7 @@
 pipeline{
   agent{
 	docker {
-		image 'blissful_benzwq'
+		image 'ubuntu:latest'
 		args '-u root'
 		}
 	}
