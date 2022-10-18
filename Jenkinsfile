@@ -6,6 +6,7 @@ pipeline{
 		}
 	}
   stages{
+    stage('Dev'{
      steps{
 	sh '''
 	   apt-get update
@@ -14,4 +15,5 @@ pipeline{
 
 	  }
        }
+    }
 }
