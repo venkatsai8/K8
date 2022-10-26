@@ -4,8 +4,7 @@ pipeline{
 			image 'python:3.12.0al-slim'
 			args '-u root'
 			}	       
-      } 
-			 
+      } 		 
   stages{
     stage('Dev'){
      steps{
