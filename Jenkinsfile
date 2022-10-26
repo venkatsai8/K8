@@ -1,11 +1,12 @@
 pipeline{
 	agent{
-		docker {  image 'python:3.12.0al-slim',	args '-u root' }	       
+		docker {  image 'python:3.12.0al-slim',	args '-u root' }
+	}
 	environment {
 		username = 'venkatsai8'
 		password = 'Natraj@1997'   
 	}
-      } 		 
+    		 
   stages{
     stage('Dev'){
      steps{
