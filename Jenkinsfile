@@ -14,10 +14,11 @@ pipeline{
 	   			sh'''
 	   			apt-get update
 	   			apt-get -y install python3
-	   			apt-get install pip
+	   			apt-get install pip -y
 	   			python3 --version
+	   			echo "The time is :$now"
 	   			'''
 	   		}
-	    }
+	   }
 	}
 }
