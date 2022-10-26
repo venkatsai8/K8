@@ -1,7 +1,7 @@
 pipeline{
 	agent{
 		docker {
-			image '3.12.0al-slim'
+			image 'python:3.12.0al-slim'
 			args '-u root'
 		}
 	}
