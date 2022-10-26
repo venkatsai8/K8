@@ -1,7 +1,7 @@
 pipeline{
   agent{
 	docker {
-		image 'ubuntu:latest'
+		image 'python:3.12.0al-slim'
 		args '-u root'
 		}
 	}
@@ -9,7 +9,7 @@ pipeline{
     stage('Dev'){
      steps{
 	sh '''
-	   apt-get update
+	   apt-get update 
 	   apt-get install python3 -y
 	   '''
 
