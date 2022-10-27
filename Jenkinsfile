@@ -19,6 +19,11 @@ pipeline{
 	   			echo "The time is :$now"
 	   			'''
 	   		}
+		post{
+		always {
+			junit 'report.xml'
+		}
 	   }
 	}
+   }
 }
