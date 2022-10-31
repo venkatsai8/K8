@@ -25,9 +25,12 @@ pipeline{
 	    }
 	   }
 	}
-	post{
-	   always{
-		junit 'report.xml'
-		}
-	}
+      stage('File'){
+        steps{
+          script{
+                def data = readFile(file:'cat /var/lib/jenkins/jobs/${JOB_NAME}/branches/${BRANCH_NAME}/builds/${BUILD_NUMBER}/log')
+            }
+          }
+        }
+
 }
