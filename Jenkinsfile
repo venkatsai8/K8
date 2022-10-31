@@ -24,7 +24,6 @@ pipeline{
 	   '''
 	    }
 	   }
-   	}
 	stage('File'){
 	   steps{
 		   sh '''
@@ -35,4 +34,6 @@ pipeline{
 		   '''
 		}
 	}
+	   
+   }	  
 }
