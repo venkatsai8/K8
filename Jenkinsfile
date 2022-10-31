@@ -11,7 +11,7 @@ pipeline{
    stages{
       stage('Dev'){
         steps{
-           sh'''
+           sh '''
 	   	apt-get update
 	   	apt-get -y install python3
 	   	apt-get install pip -y
@@ -21,13 +21,18 @@ pipeline{
 	   	pip install pandas 
 	   	echo "The username is "${username}
 	   	echo "The password is "${password}
-		pwd
-		dir(cd /var/lib/jenkins/jobs/${JOB_NAME}/branches/${BRANCH_NAME}/builds/${BUILD_NUMBER} )
-		pwd
-		cat log
 	   '''
 	    }
 	   }
-   }
-
+   	}
+	stage('File'){
+	   steps{
+		   sh '''
+		     pwd
+		     dir("/var/lib/jenkins/jobs/${JOB_NAME}/branches/${BRANCH_NAME}/builds/${BUILD_NUMBER}")
+		     pwd
+		     echo readFile(file: "log", encoding: "Base64")
+		   '''
+		}
+	}
 }
