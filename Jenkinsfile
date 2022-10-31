@@ -10,6 +10,7 @@ pipeline{
     	   steps{
     		   sh '''
     		     echo "The workspace is " ${WORKSPACE}
+		     ls -lrt
     		   '''
     		}
     	}
