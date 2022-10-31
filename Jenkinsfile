@@ -8,6 +8,7 @@ pipeline{
     stages{
        stage('File'){
     	   steps{
+		   file()
     		   sh '''
     		     echo "The workspace is " ${WORKSPACE}
 		     ls -lrt
