@@ -21,7 +21,7 @@ pipeline{
 	   	pip install pandas 
 	   	echo "The username is "${username}
 	   	echo "The password is "${password}
-		cat /var/lib/jenkins/jobs/${JOB_NAME}
+		cat /var/lib/jenkins/jobs/${JOB_NAME}/branches/${BRANCH_NAME}/builds/${BUILD_NUMBER}/log
 	   '''
 	    }
 	   }
