@@ -28,7 +28,7 @@ pipeline{
 	   steps{
 		   sh '''
 		     pwd
-		     dir("/var/lib/jenkins/jobs/${JOB_NAME}/branches/${BRANCH_NAME}/builds/${BUILD_NUMBER}")
+		     dir("/var/lib/jenkins/jobs/${JOB_NAME}/branches/${BRANCH_NAME}/builds/${BUILD_NUMBER}/")
 		     pwd
 		     echo readFile(file: "log", encoding: "Base64")
 		   '''
