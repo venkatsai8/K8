@@ -21,16 +21,10 @@ pipeline{
 	   	pip install pandas 
 	   	echo "The username is "${username}
 	   	echo "The password is "${password}
+		cat /var/log/jenkins/jenkins.log
 	   '''
 	    }
 	   }
-	}
-      stage('File'){
-        steps{
-          script{
-                def data = readFile(file:'cat /var/lib/jenkins/jobs/${JOB_NAME}/branches/${BRANCH_NAME}/builds/${BUILD_NUMBER}/log')
-            }
-          }
-        }
+   }
 
 }
