@@ -1,7 +1,7 @@
 pipeline{
 	agent{
 		docker {
-			image 'python:latest'
+			image 'ubuntu:latest'
 			args '-u root'
 		}
 	}
@@ -15,8 +15,12 @@ pipeline{
 	   			apt-get update
 	   			apt-get -y install python3
 	   			apt-get install pip -y
-	   			python3 --version
+	   			echo "Python version is " python3 --version
 	   			echo "The time is :$now"
+	   			echo "Pip version is " pip --version 
+	   			pip install pandas 
+	   			echo "The username is "${username}
+	   			echo "The password is "${password}
 	   			'''
 	   		}
 	   }
